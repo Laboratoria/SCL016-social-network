@@ -4,44 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Saudade</title>
 </head>
 <body>
-
-<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
-
-<script>
-
-  var firebaseConfig = {
-    apiKey: "AIzaSyBMMBBn6lGE7PUp8zQNbs2hVvej5tVmVOo",
-    authDomain: "saudade-65a6b.firebaseapp.com",
-    projectId: "saudade-65a6b",
-    storageBucket: "saudade-65a6b.appspot.com",
-    messagingSenderId: "981149743720",
-    appId: "1:981149743720:web:34b1feb31b39e2c79399dd",
-    measurementId: "G-TCN7LTTV55"
-  };
- 
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-
-
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-   
-    var user = userCredential.user;
-  
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-  
-  });
-</script>
+<container>
+  <div>
+    <button id="btnMail" class="mailButton"> Iniciar con correo electrónico</button>
+    <button id="btnGoogle" class="googleButton"> Iniciar sesión con Google</button>
+    <button id="btnRegister" class="registerButton"> Registrarse </button>
+  </div>
+  <div id="login" class="loginButtons">
+    <input type="email" id="mailLogin" placeholder="Correo electrónico">
+    <input type="password" id="passLogin" placeholder="Contraseña">
+    <button id="btnLogin" class="btnLogin">Ir</button>
+  </div>
+  <div id="register" class="registerButtons">
+    <input type="email" id="mailInput" class="mailRegister" placeholder="Correo Electrónico">
+    <input id="nameInput" class="nameRegister" placeholder="Nombre y Apellido">
+    <input type= "password" id="passInput" class="passRegister" placeholder="Contraseña">
+    <button id="btnGo" class="btnGo">Ir</button>
+  </div>
+</container>
   <script type="module" src="main.js"></script>
-</body>
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+  </body>
 </html>
