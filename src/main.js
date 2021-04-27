@@ -1,6 +1,7 @@
 const btnLogin = document.getElementById("btnMail")
 const loginDiv = document.getElementById("login");
 const sendRegisterBtn = document.getElementById("btnGo");
+
 const firebaseConfig = {
    apiKey: "AIzaSyBMMBBn6lGE7PUp8zQNbs2hVvej5tVmVOo",
    authDomain: "saudade-65a6b.firebaseapp.com",
