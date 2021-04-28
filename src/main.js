@@ -18,31 +18,28 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-
 // REGISTRO CON CORREO Y CONTRASEÑA //
 sendRegisterBtn.addEventListener('click', () => {
   register();
-}
-)
+});
 
 // INICIO DE SESION CON CORREO Y CONTRASEÑA //
 sendLoginBtn.addEventListener('click', () => {
   access();
-}
-)
+});
 
 // AUTENTICACION CON GOOGLE //
 loginGoogleBtn.addEventListener('click', () => {
   authWithGoogle();
-})
+});
 
 // MENSAJES EN ESTADO DE LOGIN //
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     document.getElementById('borrar').innerHTML = 'Logueado como usuario registrado';
-    let uid = user.uid;
-  }
-  else {
+    const uid = user.uid;
+    console.log(uid);
+  } else {
     document.getElementById('borrar').innerHTML = 'No logueado como usuario registrado';
   }
 });
