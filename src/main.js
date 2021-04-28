@@ -1,10 +1,11 @@
 import { register, access, authWithGoogle } from './lib/index.js';
+import { loginView, loginInput, registerInput } from './view/login.js'
 
-// const btnLogin = document.getElementById("btnMail");
-// const loginDiv = document.getElementById("login");
 const sendLoginBtn = document.getElementById('btnLogin');
 const loginGoogleBtn = document.getElementById('btnGoogle');
 const sendRegisterBtn = document.getElementById('btnGo');
+const btnLoginMail = document.getElementById('btnMail');
+const btnRegisterMail = document.getElementById('btnRegister');
 
 // CREACION DE PROYECTO EN EL SERVIDOR DE FIREBASE //
 const firebaseConfig = {
@@ -17,6 +18,19 @@ const firebaseConfig = {
   measurementId: 'G-TCN7LTTV55',
 };
 firebase.initializeApp(firebaseConfig);
+
+loginView(); 
+
+// DESPLEGAR MENÚ LOGIN
+btnLoginMail.addEventListener('click', () =>{
+loginInput();
+}
+)
+// DESPLEGAR MENÚ REGISTRO
+btnRegisterMail.addEventListener('click', () => {
+  registerInput()
+  }
+  )
 
 // REGISTRO CON CORREO Y CONTRASEÑA //
 sendRegisterBtn.addEventListener('click', () => {
