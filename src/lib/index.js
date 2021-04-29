@@ -1,10 +1,3 @@
-// aqui exportaras las funciones que necesites
-
-// export const myFunction = () => {
-//   // aqui tu codigo
-//   console.log('Hola mundo!');
-// };
-
 // REGISTRO CON CORREO Y CONTRASEÑA //
 export const register = () => {
   const email = document.getElementById('mailInput').value;
@@ -19,7 +12,6 @@ export const register = () => {
       alert(errorMessage)
     })
 }
-
 // INICIO DE SESION CON CORREO Y CONTRASEÑA //
 export const access = () => {
   let email = document.getElementById('mailLogin').value;
@@ -34,11 +26,9 @@ export const access = () => {
       alert(errorMessage);
     });
 }
-
 // AUTENTICACION CON GOOGLE //
 export const authWithGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
-
   firebase.auth()
     .signInWithPopup(provider)
     .then((result) => {
