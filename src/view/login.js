@@ -1,4 +1,4 @@
-import { register } from '../lib/index.js'
+import { register,authWithGoogle } from '../lib/index.js'
 
 export const loginScreen = () => {
     const LoginView = `
@@ -28,5 +28,13 @@ export const loginScreen = () => {
         const pass = document.getElementById('passInput').value;
         register(mail, pass);
     });
+    const btnGoogleGo=divLogin.querySelector('#btnGoogle');
+    btnGoogleGo.addEventListener('click', () =>{
+        authWithGoogle();
+    })
+
     return divLogin;
+
+    
 }
+
