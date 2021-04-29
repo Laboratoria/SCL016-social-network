@@ -8,8 +8,7 @@ export const register = (mail, pass) => {
       var errorCode = error.code;
       var errorMessage = error.message;
       alert(errorMessage)
-    })
-    
+    })    
 }
 
 // INICIO DE SESION CON CORREO Y CONTRASEÑA //
@@ -29,8 +28,7 @@ export const access = () => {
 
 // AUTENTICACION CON GOOGLE //
 export const authWithGoogle = () => {
-  const provider = new firebase.auth.GoogleAuthProvider();
-
+  const provider = new firebase.auth.GoogleAuthProvider()
   firebase.auth()
     .signInWithPopup(provider)
     .then((result) => {
