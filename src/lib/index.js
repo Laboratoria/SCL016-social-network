@@ -1,15 +1,6 @@
-// aqui exportaras las funciones que necesites
-
-// export const myFunction = () => {
-//   // aqui tu codigo
-//   console.log('Hola mundo!');
-// };
-
 // REGISTRO CON CORREO Y CONTRASEÑA //
-export const register = () => {
-  const email = document.getElementById('mailInput').value;
-  const pass = document.getElementById('passInput').value;
-  firebase.auth().createUserWithEmailAndPassword(email, pass)
+export const register = (mail, pass) => {
+  firebase.auth().createUserWithEmailAndPassword(mail, pass)
     .then((userCredential) => {
       let user = userCredential.user;
     })
@@ -18,6 +9,7 @@ export const register = () => {
       var errorMessage = error.message;
       alert(errorMessage)
     })
+    
 }
 
 // INICIO DE SESION CON CORREO Y CONTRASEÑA //
