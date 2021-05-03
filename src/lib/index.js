@@ -4,28 +4,28 @@ export const register = () => {
   const pass = document.getElementById('passInput').value;
   firebase.auth().createUserWithEmailAndPassword(email, pass)
     .then((userCredential) => {
-      let user = userCredential.user;
+      const user = userCredential.user;
     })
     .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      alert(errorMessage)
-    })
-}
-// INICIO DE SESION CON CORREO Y CONTRASEÑA //
-export const access = () => {
-  let email = document.getElementById('mailLogin').value;
-  let password = document.getElementById('passLogin').value;
-  firebase.auth().signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      var user = userCredential.user;
-    })
-    .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      const errorCode = error.code;
+      const errorMessage = error.message;
       alert(errorMessage);
     });
-}
+};
+// INICIO DE SESION CON CORREO Y CONTRASEÑA //
+export const access = () => {
+  const email = document.getElementById('mailLogin').value;
+  const password = document.getElementById('passLogin').value;
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage);
+    });
+};
 // AUTENTICACION CON GOOGLE //
 export const authWithGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
@@ -33,15 +33,15 @@ export const authWithGoogle = () => {
     .signInWithPopup(provider)
     .then((result) => {
       // @type
-      let credential = result.credential;
-      let token = credential.accessToken;
-      let user = result.user;
+      const credential = result.credential;
+      const token = credential.accessToken;
+      const user = result.user;
     }).catch((error) => {
-      let errorCode = error.code;
-      let errorMessage = error.message;
-      let email = error.email;
-      let credential = error.credential;
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      const email = error.email;
+      const credential = error.credential;
       alert(errorMessage);
       firebase.auth().signInWithRedirect(provider);
-    })
-}
+    });
+};
