@@ -1,20 +1,21 @@
 export const profile = () => {
+  // <!-- PAGINA DE PERFIL -->
   const profileView = `
-<header>
+    <header>
   <nav class="menuPricipal ">
     <ul class="container">
       <li ><i class="far fa-user-circle fa-lg " ></i>
         <div class="submenu">
           <ul>
-            <li><i class="far fa-user-circle "></i></li>
-            <li>Nombre de Usuario</li>
-            <li>Correo electronico</li>
-          </ul>
-          <ul>
-            <li>Editar perfil</li>
+            <li class = "submenu_item"><i class="far fa-user-circle "></i></li>
+            <li class = "submenu_item">Nombre de Usuario</li>
+            <li class = "submenu_item">Correo electronico</li>
+          </ul> 
+          <ul class = "b_item">
+            <li class = "submenu_item1">Editar perfil</li>
             <li>Ver Manifiesto</li>
           </ul>
-          <ul>
+          <ul class = "b_item">
             <li>Cerrar Sesion</li>
             <li>Eliminar perfil</li>
           </ul>
@@ -47,6 +48,12 @@ export const profile = () => {
   </div>
 </main>
 
-<footer> <hr> Diseñado y creado por F.A.B © </footer>
-`
-}
+<footer> <hr> Diseñado y creado por F.A.B ©
+</footer>
+`;
+  const divProfile = document.createElement('div');
+  divProfile.setAttribute('class', 'ViewProfile');
+  divProfile.innerHTML = profileView;
+
+  return divProfile;
+};

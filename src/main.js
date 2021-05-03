@@ -1,7 +1,12 @@
 // import { register, access, authWithGoogle } from './lib/index.js';
-import { loginScreen } from './view/login.js'
+// import { loginScreen } from './view/login.js';
+import { changeRoute } from './lib/router.js';
 // CREACION DE PROYECTO EN EL SERVIDOR DE FIREBASE //
 const init = () => {
+  window.addEventListener('hashchange', () => {
+    changeRoute(window.location.hash);
+  });
+
   const firebaseConfig = {
     apiKey: 'AIzaSyBMMBBn6lGE7PUp8zQNbs2hVvej5tVmVOo',
     authDomain: 'saudade-65a6b.firebaseapp.com',
@@ -12,9 +17,6 @@ const init = () => {
     measurementId: 'G-TCN7LTTV55',
   };
   firebase.initializeApp(firebaseConfig);
-  if (window.location.hash == '#/login') {
-    const divLogin = loginScreen();
-    document.getElementById('rootLogin').appendChild(divLogin);
-  }
-}
-init();
+  window.location.hash = '#/login';
+};
+window.addEventListener('load', init);

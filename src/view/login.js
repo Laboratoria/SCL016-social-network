@@ -1,4 +1,4 @@
-import { register, access, authWithGoogle } from '../lib/index.js';
+import { register, authWithGoogle, access } from '../lib/index.js';
 
 export const loginScreen = () => {
   const LoginView = `
@@ -10,7 +10,7 @@ export const loginScreen = () => {
     <div id="login" class="loginButtons">
       <input type="email" id="mailLogin" placeholder="Correo electrónico">
       <input type="password" id="passLogin" placeholder="Contraseña">
-      <button id="btnLogin" class="btnLogin">Ir</button>
+      <button id="btnLogin" class="btnLogin"><a href= "#/profile">Ir</button>
     </div>
     <div id="register" class="registerButtons">
       <input type="email" id="mailInput" class="mailRegister" placeholder="Correo Electrónico">
@@ -22,7 +22,6 @@ export const loginScreen = () => {
   const divLogin = document.createElement('div');
   divLogin.setAttribute('class', 'ViewContainer');
   divLogin.innerHTML = LoginView;
-
   const btnRegisterGo = divLogin.querySelector('#btnGo');
   btnRegisterGo.addEventListener('click', () => {
     const mail = document.getElementById('mailInput').value;

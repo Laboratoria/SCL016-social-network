@@ -1,2 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap'); /*tipografia logo*/
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main{
+  display: flex;
+}
+h3{
+    font-family: 'Cormorant Garamond', serif;
+
+}
+.container{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+
+}
+header{
+    background: linear-gradient(180deg, rgba(217, 198, 206, 0.93847) 0%, #FFFFFF 100%);
+}
+
+.submenu{
+
+    background:linear-gradient(180deg, rgba(217, 198, 206, 0.93847) 0%, #FFFFFF 100%);
+    position: absolute;
+    top: 43px;
+    width: 200px;
+    overflow: visible;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    list-style: none;    
+          
+    }
+.submenu a:hover{
+  background-color: aquamarine;
+}  
+
+container:hover .submenu{
+  transform: scaleY(1);
+  visibility: visible;
+}
+
+hr{
+    border-top: rgba(0, 0, 0, 0.5);
+}
+
+footer{
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+
+
+}
+
+
+/* .list
+.headerLogo{}
+
+
+.uploadPhoto{
+    
+    border-radius: 100%;
+} */
