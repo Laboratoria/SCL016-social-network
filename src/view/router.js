@@ -1,13 +1,11 @@
-import { loginScreen } from './login.js';
-import { profile } from './profile.js';
-import { memorial } from './memorial.js';
-import { } from './posts.js';
+/* eslint-disable default-case */
+import { loginScreen } from '../view/login.js';
+import { profile } from '../view/profile.js';
+import { memorial } from '../view/memorial.js';
+// import {} from '../view/posts.js';
 
 export const changeRoute = (hash) => {
   //   if (window.location.hash == '#/login') {
-  // const divLogin = loginScreen();
-  // document.getElementById('rootLogin').appendChild(divLogin);
-  // }
   if (hash === '#/login') {
     return showTemplate(hash);
   } if (hash === '#/profile') {
@@ -21,9 +19,20 @@ export const changeRoute = (hash) => {
 };
 
 const showTemplate = (hash) => {
-  const containerRoot = document.getElementById('');
-  containerRoot.innerHTML = loginScreen();
+  const containerRoot = document.getElementById('rootLogin');
+
+  switch (hash) {
+    case '#/login':
+      containerRoot.appendChild(loginScreen());
+      break;
+    case '#/profile':
+      containerRoot.appendChild(profile());
+      break;
+    case '#/memorial':
+      containerRoot.appendChild(memorial());
+      break;
+    default:
+      containerRoot.innerHTML = '<h1>404<h1>';
+      break;
+  }
 };
-// 1.definir showTemplate
-// 2.definir los a href de los botones
-// 3.crear switch para cada caso
