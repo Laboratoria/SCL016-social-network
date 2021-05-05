@@ -5,29 +5,28 @@
     margin: 0;
 }
 
-main{
+main {
   display: flex;
 }
-h3{
-    font-family: 'Cormorant Garamond', serif;
 
+h3 {
+    font-family: 'Cormorant Garamond', serif;
 }
-.container{
+
+.container {
     display: flex;
     list-style: none;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     cursor: pointer;
-
 }
-header{
+
+header {
     background: linear-gradient(180deg, rgba(217, 198, 206, 0.93847) 0%, #FFFFFF 100%);
 }
 
-.submenu{
-
+.submenu {
     background:linear-gradient(180deg, rgba(217, 198, 206, 0.93847) 0%, #FFFFFF 100%);
     position: absolute;
     top: 43px;
@@ -38,34 +37,68 @@ header{
     visibility: hidden;
     display: none;
     list-style: none;    
-          
     }
-.submenu a:hover{
+
+.submenu a:hover {
   background-color: aquamarine;
 }  
 
-container:hover .submenu{
+container:hover .submenu {
   transform: scaleY(1);
   visibility: visible;
 }
 
-hr{
+hr {
     border-top: rgba(0, 0, 0, 0.5);
 }
 
-footer{
+footer {
     font-family: 'Cormorant Garamond', serif;
     text-align: center;
-
-
 }
 
+/* LOGIN REGISTRO */
+#welcomeSaudade{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
 
-/* .list
-.headerLogo{}
+#infiniteLogo {
+    width: 8rem;
+}
 
+#title {
+    font-family: 'Cormorant Garamond', serif, bold;
+    font-size: 2rem;
+}
 
-.uploadPhoto{
-    
-    border-radius: 100%;
-} */
+#slogan {
+    font-family: 'Cormorant Garamond', serif, bold;
+    font-size: 1rem;
+}
+
+#btnManifiesto {
+    color: black;
+    border-radius: 22px;
+    background-color: #FFFFFF;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 60%;
+}
+
+.ViewContainer {
+    background-image: url(./IMAGES/PINK\ CLOUDS.jpg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 100vh; 
+}
+
+#loginContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
