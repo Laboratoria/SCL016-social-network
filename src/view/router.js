@@ -20,7 +20,6 @@ export const changeRoute = (hash) => {
 
 const showTemplate = (hash) => {
   const containerRoot = document.getElementById('rootLogin');
-  containerRoot.innerHTML = '';
 
   switch (hash) {
     case '#/login':

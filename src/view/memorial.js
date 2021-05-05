@@ -1,30 +1,8 @@
+import { footer } from '../componentes/footer.js';
+import { header } from '../componentes/header.js';
+
 export const memorial = () => {
   const memorialView = `
-    <header>
-    <nav class="menuPricipal ">
-      <ul class="container">
-        <li ><i class="far fa-user-circle fa-lg " ></i>
-          <div class="submenu">
-            <ul>
-              <li><i class="far fa-user-circle "></i></li>
-              <li>Nombre de Usuario</li>
-              <li>Correo electronico</li>
-            </ul>
-            <ul>
-              <li>Editar perfil</li>
-              <li>Ver Manifiesto</li>
-            </ul>
-            <ul>
-              <li>Cerrar Sesion</li>
-              <li>Eliminar perfil</li>
-            </ul>
-          </div>
-        </li>
-        <li><img src="IMAGES/SMALL LOGO.png" class="headerLogo" width="90" alt="Logo "></li>
-          <li><i class="fas fa-search fa-lg "></i> <i class="fas fa-bell fa-lg" ></i></li>
-      </ul>
-    </nav>
-  </header>
     <main>
       <section id="profileElements">
         <p class="inMemory">En memoria de: </p>
@@ -39,11 +17,15 @@ export const memorial = () => {
           <div memorialPosts></div>
       </section>
      </main>
-  <footer> <hr> Diseñado y creado por F.A.B © </footer>
   `;
+
   const divMemorial = document.createElement('div');
   divMemorial.setAttribute('class', 'ViewMemorial');
+  const divMemorialContainer = document.createElement('div');
   divMemorial.innerHTML = memorialView;
+  divMemorialContainer.appendChild(header());
+  divMemorialContainer.appendChild(divMemorial);
+  divMemorialContainer.appendChild(footer());
 
-  return divMemorial;
+  return divMemorialContainer;
 };
