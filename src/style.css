@@ -1,2 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap'); /*tipografia logo*/
 
+.postedCont {
+    display: flex;
+    justify-content: center;
+}
+
+.postedPhoto {
+    display: flex;
+    height: 40vw;
+    width: 40vw;
+}
+
+.description { 
+    display: flex;
+    align-self: flex-start;
+}
+
+.flowers {
+    display: flex;
+}
+

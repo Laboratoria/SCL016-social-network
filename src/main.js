@@ -12,10 +12,15 @@ const firebaseConfig = {
   measurementId: 'G-TCN7LTTV55',
 };
 firebase.initializeApp(firebaseConfig);
+
 if (window.location.hash == '#/login') {
 const divLogin = loginScreen();
 document.getElementById('rootLogin').appendChild(divLogin);
 } 
+else if (window.location.hash == '#/posts') {
+  const divLogin = postsScreen();
+  document.getElementById('rootLogin').appendChild(divLogin);
+}
 }
 init();
 
