@@ -9,7 +9,7 @@ export const loginScreen = () => {
    <button id="btnManifiesto">Ver Manifiesto</button>
 </section>
 <section id="loginContent">
- <div class="login">
+ <div class="enterPage">
    <button id="btnMail" class="mailButton">Iniciar con correo electrónico</button>
    <button id="btnGoogle" class="googleButton">Iniciar sesión con Google</button>
    <button id="btnRegister" class="registerButton">Registrarse </button>
@@ -31,18 +31,22 @@ export const loginScreen = () => {
   const divLogin = document.createElement('div');
   divLogin.setAttribute('class', 'ViewContainer');
   divLogin.innerHTML = LoginView;
+
   const btnRegisterGo = divLogin.querySelector('#btnGo');
   btnRegisterGo.addEventListener('click', () => {
     const mail = document.getElementById('mailInput').value;
     const pass = document.getElementById('passInput').value;
+    const name = document.getElementById('nameInput').value;
     register(mail, pass);
   });
+
   const btnLoginGo = divLogin.querySelector('#btnLogin');
   btnLoginGo.addEventListener('click', () => {
     const mailLog = document.getElementById('mailLogin').value;
     const passLog = document.getElementById('passLogin').value;
     access(mailLog, passLog);
   });
+
   const btnGoogleGo = divLogin.querySelector('#btnGoogle');
   btnGoogleGo.addEventListener('click', () => {
     authWithGoogle();

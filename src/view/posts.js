@@ -21,12 +21,12 @@ const postsView = `
 
 const divPosts = document.createElement('div');
 divPosts.setAttribute('class','posts');
-divPosts.innerHTML = postsView;
-
-const btnPost = divPosts.getElementById('btnPost');
+divPosts.innerHTML = postsView; 
+const btnPost = divPosts.querySelector('#btnPost');
 btnPost.addEventListener('click', () => {
-    const postComment = divPosts.getElementById('postText').value;
-    const comment = divPosts.getElementById('postedComments');
-   
+    const postComment = divPosts.querySelector('#postText').value;
+    const comment = divPosts.querySelector('#postedComments');
+    comment.innerHTML = postComment
 })
+return divPosts;
 }

@@ -1,15 +1,20 @@
 // REGISTRO CON CORREO Y CONTRASEÑA //
-
-export const currentUser = () => firebase.auth().currentUser;
-
 export const register = (mail, pass) => {
   firebase.auth().createUserWithEmailAndPassword(mail, pass)
     .then((userCredential) => {
       const user = userCredential.user;
+      window.location.hash = '#/profile';
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      if (errorCode === 'auth/invalid-email') {
+        alert('Correo inválido');
+      } else if (errorCode === 'auth/weak-password') {
+        alert('Su contraseña debe tener minimo 6 carácteres');
+      } else if (errorCode === 'auth/email-already-in-use') {
+        alert('Cuenta existente');
+      }
       alert(errorMessage);
     });
 };
