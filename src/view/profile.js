@@ -7,21 +7,32 @@ export const profile = () => {
 
 <main>
   <div id="creationProfile">
-    <figure>
-      <input type="file" id="uploadPhoto" class="uploadPhoto">
-    </figure>
-    <div id="dataPersonal">
-      <input type="text" id="newName" class="newName">
-      <input type="text" id="residency" class="recidency">
-      <input type="text" id="extra" class="extra">
+    <div class = "infProfile">
+      <figure>
+        <img src="IMAGES/imgPerfil.png" width="135">
+      </figure>
     </div>
-<hr>
+    <div id="infPersonal">
+     <h4>Nombre</h4>
+     <h4>Ciudad de Residencia</h4>
+     <h4>Extra</h4>
+    </div>
+  </div>
+    <hr>
     <div id="memorialsCreated">
       <h3>Memoriales Creados</h3>
+      <img src="IMAGES/Luci.png" alt="memorialsCreatedLucy">
+      <img src="IMAGES/imagen 1.png" alt="memorialCreatedEstellaT">
+      <img src="IMAGES/imagen 2.png" alt="memorial CreadoOliviaH">
+      <img src="IMAGES/Group 1.png" alt="createdMemorial">
     </div>
-<hr>
+    <hr>
     <div id="memorialesFollowed">
       <h3>Memoriales Seguidos</h3>
+      <img src="IMAGES/imagen 3(1).png" alt="memorialFollowingAlabertU">
+      <img src="IMAGES/Lucia Bose.png" alt="memorialFolllowingLuciaB">
+      <img src="IMAGES/Kelly Preston.png" alt="memorialFollowingKellyP">
+      <img src="IMAGES/Lucia Bose2.png" alt="memorialFollowingLucia">
     </div>
   </div>
 </main>
@@ -29,6 +40,7 @@ export const profile = () => {
   const divProfile = document.createElement('div');
   divProfile.setAttribute('class', 'ViewProfile');
   const divProfileContainer = document.createElement('div');
+  divProfileContainer.setAttribute('class', 'ProfileContainer');
   divProfile.innerHTML = profileView;
   divProfileContainer.appendChild(header());
   divProfileContainer.appendChild(divProfile);
