@@ -102,6 +102,9 @@ footer {
     background-size: cover;
     height: 100vh; 
 }
+.profileContainer{
+    height: 100vh;
+}
 
 #register { 
     display: none;
@@ -116,7 +119,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-
 }
 
 /* .btnDesignI {
