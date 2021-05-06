@@ -11,7 +11,7 @@ export const profile = () => {
       <input type="file" id="uploadPhoto" class="uploadPhoto">
     </figure>
     <div id="dataPersonal">
-      <input type="text" id="newName" class="newName">
+      <p id="newName" class="newName"></p>
       <input type="text" id="residency" class="recidency">
       <input type="text" id="extra" class="extra">
     </div>

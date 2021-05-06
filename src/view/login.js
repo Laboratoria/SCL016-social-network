@@ -50,7 +50,7 @@ export const loginScreen = () => {
     const mail = document.getElementById('mailInput').value;
     const pass = document.getElementById('passInput').value;
     const name = document.getElementById('nameInput').value;
-    register(mail, pass, name);
+    register(mail, pass);
   });
   // INICIO SESION CON CORREO Y CONTRASEÑA
   const btnLoginGo = divLogin.querySelector('#btnLogin');
@@ -59,10 +59,12 @@ export const loginScreen = () => {
     const passLog = document.getElementById('passLogin').value;
     access(mailLog, passLog);
   });
+
   // INGRESO CON GOOGLE
   const btnGoogleGo = divLogin.querySelector('#btnGoogle');
   btnGoogleGo.addEventListener('click', () => {
     authWithGoogle();
   });
   return divLogin;
+};
 };
