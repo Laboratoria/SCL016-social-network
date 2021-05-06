@@ -1,10 +1,9 @@
 // REGISTRO CON CORREO Y CONTRASEÑA //
-export const register = () => {
-  const email = document.getElementById('mailInput').value;
-  const pass = document.getElementById('passInput').value;
-  firebase.auth().createUserWithEmailAndPassword(email, pass)
+export const register = (mail, pass, name) => {
+  firebase.auth().createUserWithEmailAndPassword(mail, pass)
     .then((userCredential) => {
       const user = userCredential.user;
+      console.log(user);
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -14,11 +13,8 @@ export const register = () => {
 };
 // INICIO DE SESION CON CORREO Y CONTRASEÑA //
 export const access = (email, password) => {
-  // const email = document.getElementById('mailLogin').value;
-  // const password = document.getElementById('passLogin').value;
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
-      
       const user = userCredential.user;
       console.log(user);
     })
