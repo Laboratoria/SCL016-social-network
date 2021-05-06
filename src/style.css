@@ -65,6 +65,13 @@ footer {
     flex-direction: column;
 }
 
+#loginContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
 #infiniteLogo {
     width: 8rem;
 }
@@ -85,7 +92,7 @@ footer {
     background-color: #FFFFFF;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    margin-left: 60%;
+    margin-left: 30%;
 }
 
 .ViewContainer {
@@ -99,11 +106,31 @@ footer {
     height: 100vh;
 }
 
-#loginContent {
+#register { 
+    display: none;
+}
+
+#login {
+    display: none;
+}
+
+.enterPage{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
 
-/* cree la linea 98 para darle altura a .profileContainer */
+/* .btnDesignI {
+    margin: 2px;
+    border-radius: 10px;
+    Opacity: 100%;
+    mix-blend-mode: Normal;
+    filter: drop-shadow(2px 6px 5px rgba(0, 0, 0, 0.4));
+    position: absolute;
+width: 276px;
+height: 50px;
+left: 69px;
+top: 374px;
+
+} */

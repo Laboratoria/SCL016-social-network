@@ -9,9 +9,9 @@ export const loginScreen = () => {
    <button id="btnManifiesto">Ver Manifiesto</button>
 </section>
 <section id="loginContent">
- <div class="login">
-   <button id="btnMail" class="mailButton">Iniciar con correo electrónico</button>
-   <button id="btnGoogle" class="googleButton">Iniciar sesión con Google</button>
+ <div class="enterPage">
+   <button id="btnMail" class="mailButton btnDesignI">Iniciar con correo electrónico</button>
+   <button id="btnGoogle" class="googleButton btnDesignI">Iniciar sesión con Google</button>
    <button id="btnRegister" class="registerButton">Registrarse </button>
  </div>
  <div id="login" class="loginButtons">
@@ -31,18 +31,36 @@ export const loginScreen = () => {
   const divLogin = document.createElement('div');
   divLogin.setAttribute('class', 'ViewContainer');
   divLogin.innerHTML = LoginView;
+
+  // OCULTAR - MOSTRAR INPUT DE REGISTRO E INICIO
+  const bntRegisterDisplay = divLogin.querySelector('.registerButton');
+  const btnLoginDisplay = divLogin.querySelector('.mailButton');
+
+  bntRegisterDisplay.addEventListener('click', () => {
+    divLogin.querySelector('.registerButtons').style.display = 'block';
+    divLogin.querySelector('.loginButtons').style.display = 'none';
+  });
+  btnLoginDisplay.addEventListener('click', () => {
+    divLogin.querySelector('.loginButtons').style.display = 'block';
+    divLogin.querySelector('.registerButtons').style.display = 'none';
+  });
+  // REGISTRO CON CORREO Y CONTRASEÑA
   const btnRegisterGo = divLogin.querySelector('#btnGo');
   btnRegisterGo.addEventListener('click', () => {
     const mail = document.getElementById('mailInput').value;
     const pass = document.getElementById('passInput').value;
+    const name = document.getElementById('nameInput').value;
     register(mail, pass);
   });
+  // INICIO SESION CON CORREO Y CONTRASEÑA
   const btnLoginGo = divLogin.querySelector('#btnLogin');
   btnLoginGo.addEventListener('click', () => {
     const mailLog = document.getElementById('mailLogin').value;
     const passLog = document.getElementById('passLogin').value;
     access(mailLog, passLog);
   });
+
+  // INGRESO CON GOOGLE
   const btnGoogleGo = divLogin.querySelector('#btnGoogle');
   btnGoogleGo.addEventListener('click', () => {
     authWithGoogle();

@@ -2,6 +2,7 @@
 import { loginScreen } from '../view/login.js';
 import { profile } from '../view/profile.js';
 import { memorial } from '../view/memorial.js';
+import { postsScreen } from '../view/posts.js'
 // import {} from '../view/posts.js';
 
 export const changeRoute = (hash) => {
@@ -31,6 +32,9 @@ const showTemplate = (hash) => {
       break;
     case '#/memorial':
       containerRoot.appendChild(memorial());
+      break;
+    case '#/posts':
+      containerRoot.appendChild(postsScreen());
       break;
     default:
       containerRoot.innerHTML = '<h1>404<h1>';
