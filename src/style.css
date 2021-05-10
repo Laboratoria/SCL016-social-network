@@ -52,6 +52,7 @@ h4{
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+
 }
 
 header {
@@ -104,6 +105,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    height: 40vh;
 }
 
 #loginContent {
@@ -111,20 +113,23 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    margin-top: 10px;
 }
 
 #infiniteLogo {
     width: 8rem;
+    margin-top: 2rem;
 }
 
 #title {
-    font-family: 'Cormorant Garamond', serif, bold;
-    font-size: 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
 #slogan {
     font-family: 'Cormorant Garamond', serif, bold;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 #btnManifiesto {
@@ -133,7 +138,12 @@ footer {
     background-color: #FFFFFF;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    margin-left: 30%;
+    margin-left: 18%;
+    width: 130px;
+    height: 23.11px;
+    background: #FFFFFF;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    border-radius: 22px;
 }
 
 .ViewContainer {
@@ -143,6 +153,7 @@ footer {
     background-size: cover;
     height: 100vh; 
 }
+
 .profileContainer{
     height: 100vh;
 }
@@ -160,4 +171,62 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+}
+.btnDesignI, .btnDesignII {
+    margin: 7px;
+    border-radius: 10px;
+    Opacity: 96%;
+    mix-blend-mode: Normal;
+    filter: drop-shadow(2px 6px 5px rgba(0, 0, 0, 0.4));
+    width: 230px;
+    height: 40px;
+    font-size: 13px;
+    border-style: none;
+    border-image: none;
+}
+
+.btnDesignI:hover {
+    text-decoration: none;
+    color: black;
+    background-color:white;
+}
+
+.btnDesignII:hover {
+    text-decoration: none;
+    color: black;
+    background-color:#C564A9;
+}
+
+.googleLogo{
+    width: 18px;
+}
+
+.btnDesignII {
+    background: #D8C3D2;
+}
+
+.pressedButtons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 186px; 
+    height: 30px;
+    background: rgba(216, 195, 210, 0.79);
+    border: 1px solid rgba(0, 0, 0, 0.28);
+    border-radius: 7px;
+    margin: 6px;
+}
+
+.pressedButtonsGo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 82px; 
+    height: 30px;
+    background: rgba(216, 195, 210, 0.79);
+    border: 1px solid rgba(0, 0, 0, 0.28);
+    border-radius: 7px;
+    margin: 6px;
 }
