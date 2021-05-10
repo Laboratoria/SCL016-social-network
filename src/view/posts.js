@@ -1,3 +1,6 @@
+import { comments } from './comments.js';
+import { header } from '../componentes/header.js';
+
 export const postsScreen = () => {
   const postsView = `
 <div id="postedContent" class="postedCont">
@@ -18,11 +21,16 @@ export const postsScreen = () => {
 <p id="postedComments" class="postedComments"></p>
 </div>
 `;
-
   const divPosts = document.createElement('div');
-  divPosts.setAttribute('class', 'posts');
+  divPosts.setAttribute('class', 'viewPosts');
+  const divPostsContainer = document.createElement('div');
   divPosts.innerHTML = postsView;
+  divPostsContainer.appendChild(header());
+  divPostsContainer.appendChild(divPosts);
   const btnPost = divPosts.querySelector('#btnPost');
+
+  divPostsContainer.appendChild(comments());
+
 
   btnPost.addEventListener('click', () => {
     const postComment = divPosts.querySelector('#postText').value;
@@ -40,5 +48,6 @@ export const postsScreen = () => {
         console.error('Error adding document: ', error);
       });
   });
-  return divPosts;
+
+  return divPostsContainer;
 };
