@@ -12,9 +12,17 @@ export const memorial = () => {
         <h2 class="quoteMemorial">"Algo"</h2>
         <img src="" alt="profile">
       </section>
+
       <section class="memorialElements">
           <h1>Memorial</h1>
-          <div memorialPosts></div>
+          <div memorialPosts>
+          <div class="imagesM">
+          <img src="./IMAGES/paseo.jpg" alt="">
+          <img src="./IMAGES/picnic.jpg" alt="">
+          <img src="./IMAGES/" alt="">
+
+          </div>
+          </div>
       </section>
      </main>
   `;
