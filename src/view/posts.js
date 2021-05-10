@@ -23,10 +23,22 @@ export const postsScreen = () => {
   divPosts.setAttribute('class', 'posts');
   divPosts.innerHTML = postsView;
   const btnPost = divPosts.querySelector('#btnPost');
+
   btnPost.addEventListener('click', () => {
     const postComment = divPosts.querySelector('#postText').value;
     const comment = divPosts.querySelector('#postedComments');
-    comment.innerHTML = postComment;
+
+    const db = firebase.firestore();
+    db.collection('posts').add({
+      text: postComment,
+    })
+      .then((docRef) => {
+        console.log('Document written with ID: ', docRef.id);
+        comment.innerHTML = postComment;
+      })
+      .catch((error) => {
+        console.error('Error adding document: ', error);
+      });
   });
   return divPosts;
 };
