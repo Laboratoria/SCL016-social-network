@@ -18,7 +18,7 @@ export const profile = () => {
      <h4>Extra</h4>
     </div>
   </div>
-   
+   <hr>
   <div id="memorialsCreated">
     <div class="title">
       <h3>Memoriales Creados</h3>
@@ -30,6 +30,7 @@ export const profile = () => {
       <img src="IMAGES/imgCrear.png" width="23%" alt="createdMemorial">
     </div>
   </div>
+  <hr>
   <div id="memorialesFollowed">
     <div class="title">
       <h3>Memoriales Seguidos</h3>
