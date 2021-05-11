@@ -40,6 +40,10 @@ h4{
   font-size: 100%;
 }
 
+h5{
+  font-family: 'Cormorant Garamond', serif;  
+  padding:6%;
+}
 .imagesM{
     display: flex;
     justify-content: space-around;
@@ -229,4 +233,16 @@ footer {
     border: 1px solid rgba(0, 0, 0, 0.28);
     border-radius: 7px;
     margin: 6px;
+}
+
+#postContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 15%;
+  
+}
+#postText{
+    width: 85%;
+    
 }
