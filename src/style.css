@@ -39,6 +39,15 @@ h4{
   font-size: 100%;
 }
 
+h5{
+  font-family: 'Cormorant Garamond', serif;  
+  padding:6%;
+}
+.imagesM{
+    display: flex;
+    justify-content: space-around;
+}
+
 .container {
     display: flex;
     list-style: none;
@@ -227,6 +236,18 @@ footer {
     border-radius: 7px;
     margin: 6px;
 }
+
+#postContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 15%;
+  
+}
+#postText{
+    width: 85%;
+}
+
 /* MEMORIAL PAGE */
 
 .imagesMemorial{

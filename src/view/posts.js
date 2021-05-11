@@ -12,8 +12,8 @@ export const postsScreen = () => {
 <p id="flowers" class="flowers">
 <img id="giveFlowers" class="flowerButton">
 </div>
-<div id="postContainer">
-<textarea id="postText" placeholder="Escribe un comentario"></textarea>
+<div id="postContainer" class"postContainer">
+<textarea id="postText"  placeholder="Escribe un comentario"></textarea>
 <button id="btnPost" class="postButton">Comentar</button>
 </div>
 <div id"comments">

@@ -9,11 +9,12 @@ export const comments = () => {
   const db = firebase.firestore();
   db.collection('posts').get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
+      const commentsUser = doc.data();
       // doc.data() is never undefined for query doc snapshots
-      const postsList = document.createElement('h1');
-      postsList.textContent = (doc.id, ' => ', doc.data());
-      divComments.appendChild(postsList);
+      //dentro de divcomment podemos imprimir el usuario pero debemos tener primero q nada el nombre del usuario ejemplo commentsUser.user
+      divComments.innerHTML += `<div class="styleComments"><h5>${commentsUser.text}</h5></div>`;
     });
   });
   return divComments;
 };
+
