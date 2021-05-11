@@ -23,8 +23,6 @@ main {
   align-items: center;
 }
 
-   
-    
 .infProfile{
   padding-left: 3%;
 }
@@ -34,15 +32,11 @@ h3 {
   padding: 7%;
   font-size: 130%;
 }
+
 h4{
   font-family: 'Cormorant Garamond', serif;  
   padding-bottom:7%;
   font-size: 100%;
-}
-
-.imagesM{
-    display: flex;
-    justify-content: space-around;
 }
 
 .container {
@@ -52,16 +46,18 @@ h4{
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-
 }
 
+/* HEADER */
 header {
     background: linear-gradient(180deg, rgba(217, 198, 206, 0.93847) 0%, #FFFFFF 100%);
     height: 13vh;
 }
+
 .icons{
     margin-right: 7%;
 }
+
 .fa-bell:before {
     content: "\f0f3";
     padding: 50%;
@@ -89,10 +85,11 @@ container:hover .submenu {
   visibility: visible;
 }
 
+/* LINEAS ENTRE CONTENEDORES */
 hr {
     border-top: rgba(0, 0, 0, 0.5);
 }
-
+/* FOOTER */
 footer {
     font-family: 'Cormorant Garamond', serif;
     text-align: center;
@@ -229,4 +226,22 @@ footer {
     border: 1px solid rgba(0, 0, 0, 0.28);
     border-radius: 7px;
     margin: 6px;
+}
+/* MEMORIAL PAGE */
+
+.imagesMemorial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgMemorial {
+    height: 1rem;
+    width: 1rem;
+    object-fit: cover;
+}
+
+.circleProfilePhoto{
+    border-radius: 100%;
+    width: 10rem;
 }

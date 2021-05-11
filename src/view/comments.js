@@ -10,7 +10,7 @@ export const comments = () => {
   db.collection('posts').get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
       // doc.data() is never undefined for query doc snapshots
-      const postsList = divComments.createElement('h1');
+      const postsList = document.createElement('h1');
       postsList.textContent = (doc.id, ' => ', doc.data());
       divComments.appendChild(postsList);
     });

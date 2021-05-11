@@ -31,7 +31,6 @@ export const postsScreen = () => {
 
   divPostsContainer.appendChild(comments());
 
-
   btnPost.addEventListener('click', () => {
     const postComment = divPosts.querySelector('#postText').value;
     const comment = divPosts.querySelector('#postedComments');
