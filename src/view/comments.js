@@ -17,4 +17,3 @@ export const comments = () => {
   });
   return divComments;
 };
-

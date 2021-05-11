@@ -21,8 +21,8 @@ export const memorial = () => {
   <h1 class="title"> Espacio Memorial</h1> 
   <img src="./IMAGES/flor.png" width="15">
 </div>
-  <div id="imagesMemorial">
-    <img src="./IMAGES/paseo.jpg" alt="" class="imgMemorial">
+  <div id="imagesMemorial"> <a href="#/posts">
+    <img src="./IMAGES/paseo.jpg" alt="" class="imgMemorial"> 
     <img src="./IMAGES/picnic.jpg" alt="" class="imgMemorial">
     <img src="./IMAGES/amigas.jpg" alt="" class="imgMemorial">
     <img src="./IMAGES/boda.jpeg" alt="" class="imgMemorial">

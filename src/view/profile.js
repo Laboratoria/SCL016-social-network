@@ -23,8 +23,8 @@ export const profile = () => {
     <div class="title">
       <h3>Memoriales Creados</h3>
     </div>
-    <div class="imagesM">
-      <img src="IMAGES/Luci.png" width="23%" alt="memorialsCreatedLucy">
+    <div class="imagesM"> 
+      <img src="IMAGES/Luci.png" width="23%" alt="memorialsCreatedLucy"> 
       <img src="IMAGES/EstellaT.png" width="23%" alt="memorialCreatedEstellaT">
       <img src="IMAGES/OliviaH.png" width="23%" alt="memorial CreadoOliviaH">
       <img src="IMAGES/imgCrear.png" width="23%" alt="createdMemorial">

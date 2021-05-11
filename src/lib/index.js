@@ -30,7 +30,7 @@ export const access = (email, password) => {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      alert(errorMessage);
+      alert('Correo electrónico o contraseña inválido');
     });
 };
 // AUTENTICACION CON GOOGLE //

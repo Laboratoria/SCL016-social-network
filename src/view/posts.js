@@ -3,23 +3,23 @@ import { header } from '../componentes/header.js';
 
 export const postsScreen = () => {
   const postsView = `
-<div id="postedContent" class="postedCont">
-<img id="postedPhoto">
-<div class="description">
-<p id="usernamePost"></p>
-<p id="postedDescription"></p>
-</div>
-<p id="flowers" class="flowers">
-<img id="giveFlowers" class="flowerButton">
-</div>
-<div id="postContainer" class"postContainer">
-<textarea id="postText"  placeholder="Escribe un comentario"></textarea>
-<button id="btnPost" class="postButton">Comentar</button>
-</div>
-<div id"comments">
-<p id="postUser" class "postUser"></p>
-<p id="postedComments" class="postedComments"></p>
-</div>
+  <main id="postsElements">
+    <div id="postedContent" class="postedCont">
+      <img src="./IMAGES/amigas.jpg" id="postedPhoto" class="postedPicture">
+      <div class="description">
+        <p id="usernamePost"></p>
+        <p id="postedDescription"></p>
+      </div>
+    </div>
+    <div class="flowers">
+      <p id="flowers">
+        <img src="./IMAGES/flor.png" width="15" class="flower">
+    </div>
+    <div id="postContainer" class="postContainer">
+      <textarea id="postText" placeholder="Escribe un comentario"></textarea>
+      <button id="btnPost" class="postButton">Comentar</button>
+    </div>
+  </main>
 `;
   const divPosts = document.createElement('div');
   divPosts.setAttribute('class', 'viewPosts');

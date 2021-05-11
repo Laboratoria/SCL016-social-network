@@ -270,6 +270,7 @@ footer {
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
+    cursor: pointer;
 }
 
 .circleProfilePhoto{
@@ -303,5 +304,17 @@ footer {
     justify-content: space-between;
 }
 
-
+/* POSTS PAGE */
+#postsElements {
+    display: flex;
+    margin: 1rem;
 }
+
+.postedPicture {
+    width: 90vw;
+}
+
+.flower {
+    margin-left: 19rem;
+}
+
