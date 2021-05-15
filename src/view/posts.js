@@ -19,7 +19,7 @@ export const postsScreen = () => {
       <textarea id="postText" placeholder="Escribe un comentario"></textarea>
       <button id="btnPost" class="postButton">Comentar</button>
     </div>
-  </main>
+   </main>
 `;
   const divPosts = document.createElement('div');
   divPosts.setAttribute('class', 'viewPosts');
@@ -33,6 +33,7 @@ export const postsScreen = () => {
   btnPost.addEventListener('click', () => {
     const postComment = divPosts.querySelector('#postText').value;
     // const comment = divPosts.querySelector('#postedComments');
+
     const db = firebase.firestore();
     db.collection('posts').add({
       text: postComment,
@@ -40,12 +41,10 @@ export const postsScreen = () => {
       .then((docRef) => {
         console.log('Document written with ID: ', docRef.id);
         divPosts.querySelector('#postText').value = '';
-        comments.innerHTML = postComment;
       })
       .catch((error) => {
         console.error('Error adding document: ', error);
       });
   });
-
   return divPostsContainer;
 };
