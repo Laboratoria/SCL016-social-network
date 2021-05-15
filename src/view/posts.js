@@ -1,4 +1,4 @@
-import { comments } from './comments.js';
+import { comments } from '../componentes/comments.js';
 import { header } from '../componentes/header.js';
 
 export const postsScreen = () => {
@@ -28,20 +28,19 @@ export const postsScreen = () => {
   divPostsContainer.appendChild(header());
   divPostsContainer.appendChild(divPosts);
   const btnPost = divPosts.querySelector('#btnPost');
-
   divPostsContainer.appendChild(comments());
 
   btnPost.addEventListener('click', () => {
     const postComment = divPosts.querySelector('#postText').value;
-    const comment = divPosts.querySelector('#postedComments');
-
+    // const comment = divPosts.querySelector('#postedComments');
     const db = firebase.firestore();
     db.collection('posts').add({
       text: postComment,
     })
       .then((docRef) => {
         console.log('Document written with ID: ', docRef.id);
-        comment.innerHTML = postComment;
+        divPosts.querySelector('#postText').value = '';
+        comments.innerHTML = postComment;
       })
       .catch((error) => {
         console.error('Error adding document: ', error);

@@ -1,10 +1,27 @@
 // REGISTRO CON CORREO Y CONTRASEÑA //
 export const register = (mail, pass) => {
   firebase.auth().createUserWithEmailAndPassword(mail, pass)
-    .then((userCredential) => {
-      const user = userCredential.user;
+    .then((credential) => {
+      const divLogin = document.querySelector('div');
+      const user = divLogin.querySelector('#nameInput').value;
+      // eslint-disable-next-line no-shadow
+      const mail = document.getElementById('mailInput').value;
+      credential.user.updateProfile({
+        displayName: user,
+      });
+      firebase.firestore().collection('users').doc(credential.user.uid).set({
+        displayName: user,
+        email: mail,
+      })
+        .then((docRef) => {
+          alert('Los datos fueron guardados correctamente!');
+        })
+        .catch((error) => {
+          alert('Los datos no pudieron ser guardados :(');
+        });
+    })
+    .then(() => {
       window.location.hash = '#/profile';
-      console.log(user);
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -24,7 +41,6 @@ export const access = (email, password) => {
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
       const user = userCredential.user;
-      console.log(user);
       window.location.hash = '#/profile';
     })
     .catch((error) => {
@@ -53,3 +69,30 @@ export const authWithGoogle = () => {
       firebase.auth().signInWithRedirect(provider);
     });
 };
+
+// ESTA PINTA NOMBRE DE USUARIO
+export const userName = (user) => {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      const uid = (firebase.auth().currentUser).uid;
+      firebase.firestore().collection('users').doc(uid).get()
+        .then((doc) => {
+          const divProfile = document.querySelector('div');
+          divProfile.querySelector('#name').innerHTML = `${doc.data().displayName}`;
+        });
+    }
+  });
+};
+
+// FUNCIÓN PARA GUARDAR CONTENIDO EN FIRESTORE CLOUD
+// export const uploadImg = () => {
+//   const uid = (firebase.auth().currentUser).uid;
+//   const divMemorial = document.querySelector('div');
+//   const file = divMemorial.querySelector('#image');
+//   const storageRef = firebase.storage().ref(`PostedImages/${uid}/${file.name}`);
+//   storageRef.put(file)
+//     .then((snapshot) => {
+//       console.log('Uploaded a blob or file!');
+//       snapshot.ref.getDownloadURL();
+//     });
+// };
