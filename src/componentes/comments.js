@@ -1,6 +1,7 @@
 export const comments = () => {
   const divComments = document.createElement('div');
   divComments.setAttribute('class', 'divComments');
+
   const db = firebase.firestore();
 
   db.collection('posts').onSnapshot((querySnapshot) => {
