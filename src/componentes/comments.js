@@ -6,6 +6,7 @@ export const comments = () => {
 
   const deleteCommentsUser = (id) => db.collection('posts').doc(id).delete();
   // const getPost = (id) => db.collection('posts').doc(id).get();
+
   db.collection('posts').onSnapshot((querySnapshot) => {
     divComments.innerHTML = '';
     querySnapshot.forEach((doc) => {
@@ -37,6 +38,7 @@ export const comments = () => {
       //     const postE = doc.data();
       //   });
       // });
+
     });
   });
   return divComments;
