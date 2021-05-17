@@ -14,7 +14,8 @@ export const comments = () => {
       commentsUser.id = doc.id;
       divComments.innerHTML += `
       <main class="commentsBox">
-      <div id="styleComments" class="styleComments"> <span class="a">  ${commentsUser.name} </span> <span class="b">  ${commentsUser.text} </span>
+      <div id="styleComments" class="styleComments"> <span class="a">  ${commentsUser.name} </span> <span class="b" id="postText
+      ">  ${commentsUser.text} </span>
       </div>
       <div class="styleCrudButtons">
         <button class="btnDelete crudBtn" data-id="${commentsUser.id}">Eliminar</button>
