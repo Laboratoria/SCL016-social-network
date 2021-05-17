@@ -1,6 +1,6 @@
 // import { register, access, authWithGoogle } from './lib/index.js';
 // import { loginScreen } from './view/login.js';
-import { changeRoute } from './lib/router.js';
+import { changeRoute } from './router.js';
 // CREACION DE PROYECTO EN EL SERVIDOR DE FIREBASE //
 const init = () => {
   window.addEventListener('hashchange', () => {

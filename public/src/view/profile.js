@@ -1,6 +1,6 @@
 import { footer } from '../componentes/footer.js';
 import { header } from '../componentes/header.js';
-import { userName } from '../lib/index.js';
+import { userName } from '../../index.js';
 
 export const profile = () => {
   // <!-- PAGINA DE PERFIL -->

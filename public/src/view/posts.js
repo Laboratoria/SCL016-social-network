@@ -37,6 +37,8 @@ export const postsScreen = () => {
     const db = firebase.firestore();
     db.collection('posts').add({
       text: postComment,
+      name: firebase.auth().currentUser.displayName,
+      date: new Date().toLocaleString(),
     })
       .then((docRef) => {
         console.log('Document written with ID: ', docRef.id);

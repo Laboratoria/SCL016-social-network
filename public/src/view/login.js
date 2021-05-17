@@ -1,4 +1,4 @@
-import { register, authWithGoogle, access } from '../lib/index.js';
+import { register, authWithGoogle, access } from '../../index.js';
 
 export const loginScreen = () => {
   const LoginView = `

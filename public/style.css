@@ -237,17 +237,6 @@ footer {
     margin: 6px;
 }
 
-#postContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-right: 15%;
-  
-}
-#postText{
-    width: 85%;
-}
-
 /* MEMORIAL PAGE */
 
 .ViewMemorial {
@@ -295,6 +284,8 @@ footer {
 
 .title {
     padding: 0.5rem;
+    font-style: italic;
+    font-family: 'Cormorant Garamond';
 }
 
 .titleMemorial{
@@ -302,18 +293,88 @@ footer {
     margin-right: 3rem;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 /* POSTS PAGE */
+.commentsBox {
+    margin-bottom: 2rem;
+}
+
+#postText {
+  width: 85%;
+}
+
+#postContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 15%;
+}
+
+.viewPosts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
 #postsElements {
     display: flex;
     margin: 1rem;
 }
 
 .postedPicture {
-    width: 90vw;
+    width: 80vw;
 }
 
-.flower {
-    margin-left: 19rem;
+.flowers {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.styleCrudButtons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.crudBtn {
+    background-color: transparent;
+    color: #B6A2B0;
+    border-style: none;
+    padding: 0rem;
+    margin: 0.3rem;
+    font-family: 'Cormorant Garamond';
+}
+
+.styleComments{
+    display: inline;
+    text-align: justify;
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 590;
+}
+
+span.a {
+    font-weight: bolder;
+    color: #D8C3D2;
+    font-family: 'Cormorant Garamond, serif';
+}
+
+.postButton {
+  background-color: #B6A2B0;
+  color: #FFFFFF;
+  border-style: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0.5rem;
+  font-family: 'Cormorant Garamond';
+}
+
+.divComments {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 1.5rem;
 }
