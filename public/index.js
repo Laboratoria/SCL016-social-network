@@ -83,6 +83,12 @@ export const userName = (user) => {
     }
   });
 };
+export const editPostFirebase = (id, updatedPost) => {
+  const firestore = firebase.firestore();
+  return firestore.collection('posts').doc(id).update(updatedPost);
+};
+export const getPostByID = (id) => firebase.firestore().collection('posts').doc(id).get();
+
 
 // FUNCIÓN PARA GUARDAR CONTENIDO EN FIRESTORE CLOUD
 // export const uploadImg = () => {
