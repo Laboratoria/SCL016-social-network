@@ -69,7 +69,6 @@ export const authWithGoogle = () => {
       firebase.auth().signInWithRedirect(provider);
     });
 };
-
 // ESTA PINTA NOMBRE DE USUARIO
 export const userName = (user) => {
   firebase.auth().onAuthStateChanged((user) => {
@@ -88,7 +87,6 @@ export const editPostFirebase = (id, updatedPost) => {
   return firestore.collection('posts').doc(id).update(updatedPost);
 };
 export const getPostByID = (id) => firebase.firestore().collection('posts').doc(id).get();
-
 
 // FUNCIÓN PARA GUARDAR CONTENIDO EN FIRESTORE CLOUD
 // export const uploadImg = () => {

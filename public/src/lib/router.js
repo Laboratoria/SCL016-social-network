@@ -1,8 +1,8 @@
 /* eslint-disable default-case */
-import { loginScreen } from './src/view/login.js';
-import { profile } from './src/view/profile.js';
-import { memorial } from './src/view/memorial.js';
-import { postsScreen } from './src/view/posts.js';
+import { loginScreen } from '../view/login.js';
+import { profile } from '../view/profile.js';
+import { memorial } from '../view/memorial.js';
+import { postsScreen } from '../view/posts.js';
 // import {} from '../view/posts.js';
 
 export const changeRoute = (hash) => {
@@ -20,7 +20,6 @@ export const changeRoute = (hash) => {
 };
 
 const showTemplate = (hash) => {
-
   const containerRoot = document.getElementById('rootLogin');
   containerRoot.innerHTML = '';
 

@@ -29,16 +29,13 @@ export const postsScreen = () => {
   divPostsContainer.appendChild(divPosts);
   const btnPost = divPosts.querySelector('#btnPost');
   divPostsContainer.appendChild(comments());
-
   btnPost.addEventListener('click', () => {
     const postComment = divPosts.querySelector('#postText').value;
     // const comment = divPosts.querySelector('#postedComments');
-
     const db = firebase.firestore();
     db.collection('posts').add({
       text: postComment,
       name: firebase.auth().currentUser.displayName,
-      date: new Date().toLocaleString(),
     })
       .then((docRef) => {
         console.log('Document written with ID: ', docRef.id);
